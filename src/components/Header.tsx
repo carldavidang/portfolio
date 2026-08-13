@@ -1,46 +1,70 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
-    <>
-      <header className="sticky top-0 bg-linear-to-t from-primary to-primary-hover text-2xl font-bold">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex h-20 items-center justify-between">
-            <a href="#home" className="text-surface text-3xl">
-              Carl David T. Ang
-            </a>
+    <header className="sticky top-0 z-50 border-b border-border bg-surface/90 text-text backdrop-blur-md ">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex h-20 items-center justify-between">
+          <a href="#home" className="text-2xl text-text">
+            Carl David T. Ang
+          </a>
 
-            <div className="hidden items-center gap-8 md:flex text-2xl">
+          {/* desktop nav */}
+          <div className="hidden items-center gap-8 text-xl md:flex">
+            {navLinks.map((link) => (
               <a
-                href="#about"
-                className="rounded-full px-4 py-2 text-primary-soft hover:bg-primary-soft hover:text-text"
+                key={link.href}
+                href={link.href}
+                className="rounded-full px-4 py-2 text-accent hover:bg-accent-soft hover:text-text"
               >
-                About
+                {link.label}
               </a>
+            ))}
+          </div>
 
-              <a
-                href="#skills"
-                className="rounded-full px-4 py-2 text-primary-soft hover:bg-primary-soft hover:text-text"
-              >
-                Skills
-              </a>
+          {/* mobile menu button */}
+          <button
+            type="button"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="rounded-full p-2 text-text hover:bg-accent-soft md:hidden"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
 
+        {/* mobile nav panel */}
+        <div
+          className={`overflow-hidden transition-all duration-300 md:hidden ${
+            isOpen ? "max-h-80 pb-6 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-col gap-2 text-lg">
+            {navLinks.map((link) => (
               <a
-                href="#projects"
-                className="rounded-full px-4 py-2 text-primary-soft hover:bg-primary-soft hover:text-text"
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="rounded-full px-4 py-3 text-accent hover:bg-accent-soft hover:text-text"
               >
-                Projects
+                {link.label}
               </a>
-
-              <a
-                href="#contact"
-                className="rounded-full px-4 py-2 text-primary-soft hover:bg-primary-soft hover:text-text"
-              >
-                Contact
-              </a>
-            </div>
+            ))}
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }
 

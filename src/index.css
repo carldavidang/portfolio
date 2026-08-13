@@ -1,25 +1,83 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
 @theme {
+  /* typography */
+
   --font-sans: "Space Grotesk", Inter, sans-serif;
   --font-serif: "DM Serif Display", Lora, serif;
   --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
 
-  --color-background: #FAF9FC;
-  --color-surface: #FFFFFF;
-  --color-surface-alt: #F4F1F7;
-  --color-text: #29232F;
-  --color-text-muted: #756D7D;
-  --color-border: #E5E0E8;
+  /* lightmode base */
 
-  --color-primary: #7654A8;
-  --color-primary-hover: #5B3D88;
-  --color-primary-soft: #EEE8F4;
-  --color-primary-deep: #493261;
-  --color-vfx: #8C62B5;
+  --color-background: #faf9fc;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f1f7;
 
-  --color-footer: #211A2B;
-  --color-footer-text: #FAF8FC;
-  --color-footer-muted: #8F8498;
-  --color-footer-border: #40364A;
+  --color-text: #29232f;
+  --color-text-muted: #756d7d;
+  --color-border: #e5e0e8;
+
+  /* accent (light mode) */
+
+  --color-accent: #7654a8;
+  --color-accent-hover: #5b3d88;
+  --color-accent-soft: #eee8f4;
+  --color-accent-deep: #493261;
+
+  --color-vfx: #8c62b5;
+
+  /* footer (light mode) */
+
+  --color-footer: #211a2b;
+  --color-footer-text: #faf8fc;
+  --color-footer-muted: #8f8498;
+  --color-footer-border: #40364a;
+
+  /* dark mode */
+
+  --color-dark-background: #17131c;
+  --color-dark-surface: #211b27;
+  --color-dark-surface-alt: #292230;
+
+  --color-dark-text: #f4eff7;
+  --color-dark-text-muted: #b4a9bc;
+  --color-dark-border: #3a3142;
+
+  --color-dark-accent: #a982d0;
+  --color-dark-accent-hover: #bd9ae0;
+  --color-dark-accent-soft: #332744;
+  --color-dark-accent-deep: #7654a8;
+}
+
+/* base */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* dark mode */
+
+.dark {
+  --color-background: var(--color-dark-background);
+  --color-surface: var(--color-dark-surface);
+  --color-surface-alt: var(--color-dark-surface-alt);
+
+  --color-text: var(--color-dark-text);
+  --color-text-muted: var(--color-dark-text-muted);
+  --color-border: var(--color-dark-border);
+
+  --color-accent: var(--color-dark-accent);
+  --color-accent-hover: var(--color-dark-accent-hover);
+  --color-accent-soft: var(--color-dark-accent-soft);
+  --color-accent-deep: var(--color-dark-accent-deep);
+}
+html {
+  scroll-behavior: smooth;
 }
