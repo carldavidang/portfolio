@@ -25,7 +25,7 @@ function Projects() {
               <img
                 src={capstoneTeamImg}
                 alt="Capstone project team with professor"
-                className="h-56 w-full object-cover sm:h-72 md:h-auto md:max-h-105 md:w-full md:object-contain md:bg-surface-alt md:p-4"
+                className="h-56 w-full object-cover sm:h-72 md:h-auto md:max-h-105 md:place-content-center  md:w-full md:object-contain md:bg-surface-alt md:p-4 "
               />
               <div className="mx-5 mt-3 text-xs text-gray-500 md:text-sm">
                 <p>Project access: Private academic project</p>
@@ -99,15 +99,7 @@ function Projects() {
                 className="hidden h-full w-full object-cover md:block"
               />
             </div>
-            {/* 
-            <div className="h-56 overflow-hidden bg-surface-alt sm:h-72 md:h-auto md:w-2/5">
-              <img
-                src={portfolioPreview}
-                alt="Preview of my personal portfolio website"
-                className="h-full w-full object-cover object-top"
-              />
-            </div>
-*/}
+
             <div className="flex flex-1 flex-col gap-3 p-6 sm:p-8">
               <p className="text-sm font-medium uppercase tracking-wide text-accent">
                 Personal Project
