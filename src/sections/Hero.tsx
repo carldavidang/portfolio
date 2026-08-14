@@ -44,7 +44,7 @@ function Hero() {
 
           <p className="py-2 text-lg sm:text-xl md:text-2xl">
             IT student focused on web development and software, currently
-            expanding my skills in real-time VFX and game development.
+            exploring real-time VFX and game development.
           </p>
 
           <div className="flex flex-col items-center gap-2 py-2 text-lg sm:flex-row sm:justify-center md:justify-start">
