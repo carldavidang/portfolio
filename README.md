@@ -1,75 +1,80 @@
-# React + TypeScript + Vite
+# Carl David T. Ang — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React, TypeScript, and Tailwind CSS to showcase my development work, technical skills, and progression into real-time VFX and game development.
 
-Currently, two official plugins are available:
+**Live Site:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+I'm a BSIT student focused on web development and software, currently expanding into real-time VFX and game development with Unity.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive single-page design with smooth section navigation (Home, About, Skills, Projects, Contact)
+- Skills overview across web development, tools, and technologies I'm currently learning
+- Project showcase, including my capstone project and this portfolio itself
+- Direct contact links (email, LinkedIn, GitHub)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Vite**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
 
+- Node.js (v18 or later recommended)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/carldavidang/portfolio.git
+cd <portfolio>
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The app will be available at `http://localhost:5173`.
+
+### Build
+
+```bash
+npm run build
+```
+
+## Project Structure
 
 ```
+src/
+├── components/     # UI components (Navbar, Hero, About, Skills, Projects, Contact, Footer)
+├── assets/         # Images and static assets
+├── App.tsx
+└── main.tsx
+```
+
+## Featured Projects
+
+### Little Scholars Web Portal (Capstone)
+A web-based school portal built with Laravel, Livewire, PHP, MySQL, and Tailwind CSS to simplify admissions and provide access to student information for guardians, teachers, and administrators.
+
+### This Portfolio
+Designed and developed to showcase my skills and development journey using React, TypeScript, Tailwind CSS, and Vite.
+
+## Contact
+
+- Email: ang.carldavid.t@gmail.com
+- LinkedIn: [linkedin.com/in/carl-david-ang-6885b121a](https://www.linkedin.com/in/carl-david-ang-6885b121a)
+- GitHub: [github.com/carldavidang](https://github.com/carldavidang)
+
+## License
+
+This project is open source. Feel free to use it as inspiration for your own portfolio.
