@@ -12,10 +12,10 @@ function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-surface/90 text-text backdrop-blur-md ">
+    <header className="sticky top-0 z-50 border-b border-border bg-surface/90 text-text backdrop-blur-md font-bold">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-20 items-center justify-between">
-          <a href="#home" className="text-2xl text-text">
+          <a href="#home" className="text-2xl text-text font-extrabold">
             Carl David T. Ang
           </a>
 

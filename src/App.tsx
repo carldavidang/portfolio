@@ -9,7 +9,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className='bg-surface'>
+    <div className='bg-surface scroll-smooth '>
       <Header />
       <Hero />
       <About />
